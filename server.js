@@ -15,21 +15,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("./public"));
 
-// Connect to the Mongo DB
-// mongoose.connect("mongodb://localhost/ScrappyNews", { useNewUrlParser: true });
-let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/ScrappyNews";
-mongoose.connect(MONGODB_URI);
-// mongoose.Promise = Promise;
-// mongoose.connect(MONGODB_URI, {
-//   useMongoClient: true});
-// mongoose.connect(MONGODB_URI);
-// mongoose.connect(uristring, function (err, res) {
-//   if (err) {
-//   console.log ('ERROR connecting to: ' + uristring + '. ' + err);
-//   } else {
-//   console.log ('Succeeded connected to: ' + uristring);
-//   }
-// });
+mongoose.Promise = Promise;
+let dbConnect = process.env.MONGODB_URI || "mongodb://localhost/ScrappyNews";
+if(process.env.MONGODB_URI) {
+    mongoose.connect(process.env.MONGODB_URI)
+} else {
+    mongoose.connect(dbConnect);
+}
+
+
 app.get("/", function(req, res) {
   res.send('public/index.html');
 });
