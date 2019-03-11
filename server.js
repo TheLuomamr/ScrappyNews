@@ -31,7 +31,7 @@ mongoose.connect(MONGODB_URI, {
 //   }
 // });
 app.get("/", function(req, res) {
-  res.send(index.html);
+  res.send('public/index.html');
 });
 
 app.get("/scrape", function(req, res) {
