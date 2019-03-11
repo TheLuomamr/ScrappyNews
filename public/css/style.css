@@ -1,0 +1,30 @@
+#articles{
+    border: solid black 1px;
+    border-radius: 15px;
+    background-color:rgba(243, 247, 244, 0.5);
+    opacity: 0.2px;
+    font-size: 18px;
+}
+#scrape{
+    float: center;
+}
+#bodyinput{
+    width: 100%;
+    height: 75px;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url("https://atgbcentral.com/data/out/86/4677497-golf-images.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+h1{
+    color: white;
+    font-size: 50px;
+}
+h2{
+    color:white;
+    margin-top: 100px;
+}
