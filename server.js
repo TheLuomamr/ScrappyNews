@@ -26,6 +26,8 @@ mongoose.connect("mongodb://localhost/ScrappyNews", { useNewUrlParser: true });
 //   console.log ('Succeeded connected to: ' + uristring);
 //   }
 // });
+app.get("/", function(req, res) {
+  res.send(index.html);
 
 app.get("/scrape", function(req, res) {
   axios.get("https://www.golf.com/").then(function(response) {
