@@ -5,7 +5,7 @@ let axios = require("axios");
 let cheerio = require("cheerio");
 let db = require("./models");
 
-let PORT = 8000;
+// let PORT = 8000;
 
 let app = express();
 
@@ -110,6 +110,6 @@ app.post("/articles/:id", function(req, res) {
 });
 
 // Start the server
-app.listen(PORT, function() {
-  console.log("App running on port " + PORT + "!");
-});
+// app.listen(PORT, function() {
+//   console.log("App running on port " + PORT + "!");
+// });
