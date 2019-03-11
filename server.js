@@ -21,7 +21,7 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/ScrappyNews";
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
-  useMongoClient: true
+  useMongoClient: true});
 // mongoose.connect(MONGODB_URI);
 // mongoose.connect(uristring, function (err, res) {
 //   if (err) {
@@ -32,6 +32,7 @@ mongoose.connect(MONGODB_URI, {
 // });
 app.get("/", function(req, res) {
   res.send(index.html);
+});
 
 app.get("/scrape", function(req, res) {
   axios.get("https://www.golf.com/").then(function(response) {
