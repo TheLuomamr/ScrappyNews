@@ -62,6 +62,7 @@ $.getJSON("/articles", function(data) {
         console.log(data);
         // Empty the comments section
         $("#comments").empty();
+        $("#bodyinput").empty();
       });
   
     // Also, remove the values entered in the input and textarea for note entry
